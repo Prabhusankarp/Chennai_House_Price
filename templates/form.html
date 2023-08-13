@@ -1,101 +1,96 @@
 <html>
 <body>
 <form action="{{url_for('predict_datapoint')}}" method="POST">
-    <div class="form-group">
-        <label for="Delivery_person_Age">Delivery_person_Age:</label>
-        <input type="text" id="Delivery_person_Age" name="Delivery_person_Age" placeholder="Enter Delivery_person_Age">
-    </div>
+  <div class="form-group">
+    <label for="AREA">AREA:</label>
+    <select id="AREA" name="AREA">
+      <option value="Karapakkam">Karapakkam</option>
+      <option value="Adyar">Adyar</option>
+      <option value="Chrompet">Chrompet</option>
+      <option value="Velachery">Velachery</option>
+      <option value="KK Nagar">KK Nagar</option>
+      <option value="Anna Nagar">Anna Nagar</option>
+      <option value="T Nagar">T Nagar</option>
+    </select>
+  </div>
 
     <div class="form-group">
-        <label for="Delivery_person_Ratings">Delivery_person_Ratings:</label>
-        <input type="text" id="Delivery_person_Ratings" name="Delivery_person_Ratings" placeholder="Enter Delivery_person_Ratings (float)">
+        <label for="INT_SQFT">INT_SQFT:</label>
+        <input type="text" id="INT_SQFT" name="INT_SQFT" placeholder="Enter INT_SQFT of property (float)">
     </div>
 
     <div class="form-group">  
-        <label for="Restaurant_latitude">Restaurant_latitude:</label>
-        <input type="text" id="Restaurant_latitude" name="Restaurant_latitude" placeholder="Enter Restaurant_latitude (float)">
+        <label for="N_BEDROOM">N_BEDROOM:</label>
+        <input type="text" id="N_BEDROOM" name="N_BEDROOM" placeholder="Enter No of Bedroom (float)">
     </div>
     
     <div class="form-group">
-        <label for="Restaurant_longitude">Restaurant_longitude:</label>
-        <input type="text" id="Restaurant_longitude" name="Restaurant_longitude" placeholder="Enter Restaurant_longitude (float)">
+        <label for="N_BATHROOM">N_BATHROOM:</label>
+        <input type="text" id="N_BATHROOM" name="N_BATHROOM" placeholder="Enter no of Bathroom (float)">
     </div>
   
     <div class="form-group">
-        <label for="Delivery_location_latitude">Delivery_location_latitude:</label>
-        <input type="text" id="Delivery_location_latitude" name="Delivery_location_latitude" placeholder="Enter Delivery_location_latitude (float)">
+        <label for="N_ROOM">N_ROOM:</label>
+        <input type="text" id="N_ROOM" name="N_ROOM" placeholder="Enter no of rooms (float)">
     </div>
   
     <div class="form-group">
-        <label for="Delivery_location_longitude">Delivery_location_longitude:</label>
-        <input type="text" id="Delivery_location_longitude" name="Delivery_location_longitude" placeholder="Enter Delivery_location_longitude (float)">
-    </div>         
+      <label for="SALE_COND">AREA:</label>
+      <select id="SALE_COND" name="SALE_COND">
+        <option value="Partial">Partial</option>
+        <option value="Family">Family</option>
+        <option value="AbNormal">AbNormal</option>
+        <option value="Normal Sale">Normal Sale</option>
+        <option value="AdjLand">AdjLand</option>
+      </select>
+    </div>        
   
 <div class="form-group">
-  <label for="Weather_conditions">Weather_conditions:</label>
-  <select id="Weather_conditions" name="Weather_conditions">
-    <option value="Fog">Fog</option>
-    <option value="Stormy">Stormy</option>
-    <option value="Sandstorms">Sandstorms</option>
-    <option value="Windy">Windy</option>
-    <option value="Cloudy">Cloudy</option>
-    <option value="Sunny">Sunny</option>
+  <label for="PARK_FACIL">PARK_FACIL:</label>
+  <select id="PARK_FACIL" name="PARK_FACIL">
+    <option value="No">No</option>
+    <option value="Yes">Yes</option>
   </select>
 </div>
   
 <div class="form-group">
-  <label for="Road_traffic_density">Road_traffic_density:</label>
-  <select id="Road_traffic_density" name="Road_traffic_density">
-    <option value="High">High</option>
-    <option value="Jam">Jam</option>
-    <option value="Medium">Medium</option>
-    <option value="Low">Low</option>
+  <label for="UTILITY_AVAIL">UTILITY_AVAIL:</label>
+  <select id="UTILITY_AVAIL" name="UTILITY_AVAIL">
+    <option value="ELO">ELO</option>
+    <option value="NoSeWa">NoSeWa</option>
+    <option value="NoSewr">NoSewr</option>
+    <option value="AllPub">AllPub</option>
   </select>
 </div>
 
 <div class="form-group">
-    <label for="Vehicle_condition">Vehicle_condition:</label>
-    <input type="text" id="Vehicle_condition" name="Vehicle_condition" placeholder="Enter Vehicle_condition (int)">
-</div>  
+  <label for="STREET">STREET:</label>
+  <select id="STREET" name="STREET">
+    <option value="No Access">No Access</option>
+    <option value="Paved">Paved</option>
+    <option value="Gravel">Gravel</option>
+  </select>
+</div> 
 
 <div class="form-group">
-  <label for="Type_of_order">Type_of_order:</label>
-  <select id="Type_of_order" name="Type_of_order">
-    <option value="Snack">Snack</option>
-    <option value="Meal">Meal</option>
-    <option value="Drinks">Drinks</option>
-    <option value="Buffet">Buffet</option>
+  <label for="MZZONE">MZZONE:</label>
+  <select id="MZZONE" name="MZZONE">
+    <option value="I">I</option>
+    <option value="A">A</option>
+    <option value="C">C</option>
+    <option value="RM">RM</option>
+    <option value="RH">RH</option>
+    <option value="RL">RL</option>
   </select>
 </div>
 
-<div class="form-group">
-    <label for="Type_of_vehicle">Type_of_vehicle:</label>
-    <select id="Type_of_vehicle" name="Type_of_vehicle">
-      <option value="motorcycle">motorcycle</option>
-      <option value="scooter">scooter</option>
-      <option value="electric_scooter">electric_scooter</option>
-    </select>
-  </div>
 
 <div class="form-group">
-    <label for="multiple_deliveries">multiple_deliveries:</label>
-    <input type="text" id="multiple_deliveries" name="multiple_deliveries" placeholder="Enter multiple_deliveries (float)">
-</div>
-
-<div class="form-group">
-    <label for="Festival">Festival:</label>
-    <select id="Festival" name="Festival">
-      <option value="No">No</option>
-      <option value="Yes">Yes</option>
-    </select>
-  </div>
-
-<div class="form-group">
-    <label for="City">City:</label>
-    <select id="City" name="City">
-      <option value="Metropolitian">Metropolitian</option>
-      <option value="Semi-Urban">Semi-Urban</option>
-      <option value="Urban">Urban</option>
+    <label for="BUILDTYPE">BUILDTYPE:</label>
+    <select id="BUILDTYPE" name="BUILDTYPE">
+      <option value="House">House</option>
+      <option value="Others">Others</option>
+      <option value="Commercial">Commercial</option>
     </select>
   </div>
 

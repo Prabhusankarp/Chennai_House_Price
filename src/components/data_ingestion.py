@@ -64,7 +64,7 @@ if __name__=='__main__':
 
 
 ## run data_ingestion
-
+'''
 if __name__=='__main__':
     obj=DataIngestion()
     train_data_path,test_data_path=obj.initiate_data_ingestion()
@@ -72,3 +72,5 @@ if __name__=='__main__':
     train_arr,test_arr,_=data_tranformation.initiate_data_transformation(train_data_path,test_data_path)
 
 # python src/components/data_ingestion.py
+
+'''

@@ -40,7 +40,8 @@ class CustomData:
                  UTILITY_AVAIL:str,
                  STREET:str,
                  MZZONE:str,
-                 BUILDTYPE:str
+                 BUILDTYPE:str,
+                 #building_age:int
                  ):
         
         self.AREA=AREA
@@ -54,6 +55,7 @@ class CustomData:
         self.STREET = STREET
         self.MZZONE = MZZONE
         self.BUILDTYPE = BUILDTYPE
+        #self.building_age = building_age
         
 
 
@@ -71,6 +73,7 @@ class CustomData:
                 'STREET':[self.STREET],
                 'MZZONE':[self.MZZONE],
                 'BUILDTYPE':[self.BUILDTYPE],
+                #'building_age':[self.building_age]
                 
             }
             df = pd.DataFrame(custom_data_input_dict)

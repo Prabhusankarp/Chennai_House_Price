@@ -41,7 +41,8 @@ class CustomData:
                  STREET:str,
                  MZZONE:str,
                  BUILDTYPE:str,
-                 #building_age:int
+                 DATE_BUILD,
+                 DATE_SALE
                  ):
         
         self.AREA=AREA
@@ -55,7 +56,11 @@ class CustomData:
         self.STREET = STREET
         self.MZZONE = MZZONE
         self.BUILDTYPE = BUILDTYPE
-        #self.building_age = building_age
+        self.DATE_BUILD = DATE_BUILD
+        self.DATE_BUILD=pd.DatetimeIndex([self.DATE_BUILD])
+        self.DATE_SALE=DATE_SALE
+        self.DATE_SALE=pd.DatetimeIndex([self.DATE_SALE])
+        self.building_age=(self.DATE_SALE.year - self.DATE_BUILD.year)[0]
         
 
 
@@ -73,7 +78,7 @@ class CustomData:
                 'STREET':[self.STREET],
                 'MZZONE':[self.MZZONE],
                 'BUILDTYPE':[self.BUILDTYPE],
-                #'building_age':[self.building_age]
+                'building_age':[self.building_age]
                 
             }
             df = pd.DataFrame(custom_data_input_dict)

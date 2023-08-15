@@ -30,7 +30,9 @@ def predict_datapoint():
             UTILITY_AVAIL= request.form.get('UTILITY_AVAIL'),
             STREET = request.form.get('STREET'),
             MZZONE = request.form.get('MZZONE'),
-            BUILDTYPE = request.form.get('BUILDTYPE')        
+            BUILDTYPE = request.form.get('BUILDTYPE'),
+            DATE_BUILD= str(request.form.get('DATE_BUILD')),
+            DATE_SALE= str(request.form.get('DATE_BUILD'))      
 
         )
         final_new_data=data.get_data_as_dataframe()
